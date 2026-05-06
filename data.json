@@ -2,47 +2,299 @@
   "articles": [
     {
       "id": "a1",
-      "title": "虎牙新闻：本周热点回顾",
-      "date": "2026-05-06",
-      "category": "热点",
-      "summary": "聚焦虎牙平台本周最受关注的内容与动态。",
+      "title": "",
+      "date": "",
+      "category": "游戏相关服务",
+      "summary": "查看稿件链接",
       "html": [
-        "<p>本页面是 <b>HuyaNews</b> 的静态数据驱动版演示。</p>",
-        "<p>你可以在 <code>data.json</code> 里继续添加或修改新闻内容。</p>",
-        "<p>下一步我们可以加入：搜索、标签筛选、置顶、分页。</p>"
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">国内传播：<br/>《鹅鸭杀》手游公测24小时新增用户破500万，金山携手虎牙打造年轻社交新平台</p>"
       ]
     },
     {
       "id": "a2",
-      "title": "内容生态：创作者工具与直播体验更新",
-      "date": "2026-05-05",
-      "category": "动态",
-      "summary": "从互动能力到性能优化，看看最新体验带来什么变化。",
+      "title": "",
+      "date": "",
+      "category": "",
+      "summary": "查看稿件链接",
       "html": [
-        "<p>这一期主要聚焦：创作者工具升级与直播体验优化。</p>",
-        "<p>内容入口更清晰、互动链路更顺畅，有助于提升用户停留。</p>"
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">IR官网英文Press Release: <br/>Huya Reports Goose Goose Duck Mobile Ranking No. 1 on Apple's Free App Chart in Chinese Mainland</p>"
       ]
     },
     {
       "id": "a3",
-      "title": "社区观察：用户偏好与内容趋势分析",
-      "date": "2026-05-04",
-      "category": "分析",
-      "summary": "用更清晰的维度理解观看行为与内容热度。",
+      "title": "鹅鸭杀公测亮点媒体沟通-上证报发布",
+      "date": "1月8日",
+      "category": "",
+      "summary": "查看稿件链接",
       "html": [
-        "<p>通过数据观察，我们能更快定位哪些内容更容易引发讨论与复访。</p>",
-        "<p>后续可扩展：按栏目、按热度、按时间轴展示。</p>"
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">虎牙《鹅鸭杀》上线公测 24小时内新增用户破500万</p>"
       ]
     },
     {
       "id": "a4",
-      "title": "赛事相关：精彩对局与赛程预告",
-      "date": "2026-05-03",
-      "category": "赛事",
-      "summary": "一起来看本期赛程与值得期待的对局。",
+      "title": "张书乐评论鹅鸭杀公测",
+      "date": "1月9日",
+      "category": "",
+      "summary": "查看稿件链接",
       "html": [
-        "<p>赛事类内容非常适合做成时间轴和赛程卡片。</p>",
-        "<p>你确认栏目结构后，我可以继续扩展页面组件。</p>"
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">《鹅鸭杀》爆火背后，虎牙究竟做了多少“内容”？</p>"
+      ]
+    },
+    {
+      "id": "a5",
+      "title": "证券平台热度策划 - 鹅鸭杀官宣公测上线",
+      "date": "1月7日",
+      "category": "",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">郭施亮：前几年一直玩儿的海外端游《鹅鸭杀》最近开始在国内公测手游版了</p>"
+      ]
+    },
+    {
+      "id": "a6",
+      "title": "",
+      "date": "",
+      "category": "",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">江瀚：不买量也能爆？虎牙发行《鹅鸭杀》破圈真相</p>"
+      ]
+    },
+    {
+      "id": "a7",
+      "title": "",
+      "date": "",
+      "category": "",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">《证券时报》2026游戏行业展望稿主动策划-融入鹅鸭杀爆款案例 2月9日 爆款撬动，游戏行业收入破纪录！2026年有望延续增势</p>"
+      ]
+    },
+    {
+      "id": "a8",
+      "title": "",
+      "date": "",
+      "category": "",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">新华社官微次条鹅鸭杀报道 2月22日 手游从社交进入生活带来了哪些变化？</p>"
+      ]
+    },
+    {
+      "id": "a9",
+      "title": "虎牙公司宣布新一轮股票回购计划",
+      "date": "3月18日",
+      "category": "资本市场相关",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">虎牙公司宣布新一轮5000万美元股票回购计划</p>"
+      ]
+    },
+    {
+      "id": "a10",
+      "title": "虎牙锁定2026羽毛球斯诺克赛事版权",
+      "date": "4月29日",
+      "category": "版权赛事",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">虎牙锁定2026羽毛球斯诺克赛事版权 构建全赛季体育直播矩阵</p>"
+      ]
+    },
+    {
+      "id": "a11",
+      "title": "大安庄园全球邀请赛收官",
+      "date": "2月6日",
+      "category": "自制赛事",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">大安庄园全球邀请赛圆满落幕 虎牙打造炉石传说酒馆战棋全球赛事IP</p>"
+      ]
+    },
+    {
+      "id": "a12",
+      "title": "2026江苏省电竞超级联赛",
+      "date": "4月11日",
+      "category": "自制赛事",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">电竞与文旅深度融合 2026江苏省电竞超级联赛启动</p>"
+      ]
+    },
+    {
+      "id": "a13",
+      "title": "",
+      "date": "4月10日",
+      "category": "",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">“电竞苏超”启幕，长三角加码赛事经济</p>"
+      ]
+    },
+    {
+      "id": "a14",
+      "title": "",
+      "date": "4月9日",
+      "category": "",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">走出专业场馆、告别独播与职业导向：虎牙“电竞苏超”的“反套路”，能否重构“赛事+文旅”变现逻辑？</p>"
+      ]
+    },
+    {
+      "id": "a15",
+      "title": "",
+      "date": "4月11日",
+      "category": "",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">虎牙携苏超原班人马打造电竞苏超，“苏超版大湾鸡”也来打卡</p>"
+      ]
+    },
+    {
+      "id": "a16",
+      "title": "",
+      "date": "4月9日",
+      "category": "",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">赛场下沉，产业向上，全国掀起电竞省超热</p>"
+      ]
+    },
+    {
+      "id": "a17",
+      "title": "",
+      "date": "4月9日",
+      "category": "",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">电竞苏超启动，激战《和平精英》！虎牙携手苏超原班人马打造</p>"
+      ]
+    },
+    {
+      "id": "a18",
+      "title": "",
+      "date": "4月13日",
+      "category": "",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">虎牙的转型账簿</p>"
+      ]
+    },
+    {
+      "id": "a19",
+      "title": "羊城晚报专访Prince",
+      "date": "4月28日",
+      "category": "高管相关",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">上线三月稳居下载榜前二，虎牙首席运营官陈鹏：我们要把鹅鸭杀做成年轻人的社交名片</p>"
+      ]
+    },
+    {
+      "id": "a20",
+      "title": "游戏茶馆专访Prince",
+      "date": "2月4日",
+      "category": "",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">老牌大厂闭关三年，跑出开年首个爆款，对话虎牙首席运营官：劈开新路</p>"
+      ]
+    },
+    {
+      "id": "a21",
+      "title": "Uzi回归虎牙",
+      "date": "1月31日",
+      "category": "主播相关",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">国内传播：Uzi官宣回归虎牙 2月3日开启复播首秀</p>"
+      ]
+    },
+    {
+      "id": "a22",
+      "title": "",
+      "date": "2月2日",
+      "category": "",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">IR官网英文Press Release: <br/>Huya Announces Return of E-sports Icon Uzi, Underscoring Huya's Growing Appeal to Top Streamers</p>"
+      ]
+    },
+    {
+      "id": "a23",
+      "title": "",
+      "date": "2月6日",
+      "category": "",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">Uzi重返虎牙，聊聊顶流主播的平台选择逻辑</p>"
+      ]
+    },
+    {
+      "id": "a24",
+      "title": "虎牙游戏主播专访",
+      "date": "2月2日",
+      "category": "",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">#挺膺会客厅 |姿态：别浪费天赋，专注与努力是你的底气</p>"
+      ]
+    },
+    {
+      "id": "a25",
+      "title": "",
+      "date": "2月4日",
+      "category": "",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">#挺膺会客厅 | 杨齐家：从主播到团队leader，解锁游戏内容赛道成长密码</p>"
+      ]
+    },
+    {
+      "id": "a26",
+      "title": "",
+      "date": "3月16日",
+      "category": "",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">#挺膺会客厅 |DANK1NG：竞技与运营双重维度探索行业新可能</p>"
+      ]
+    },
+    {
+      "id": "a27",
+      "title": "虎牙主播跨界",
+      "date": "2月4日",
+      "category": "",
+      "summary": "查看稿件链接",
+      "html": [
+        "<p><a href=\"about.html\">查看稿件链接</a></p>",
+        "<p style=\"color:rgba(168,179,214,.95);margin-top:10px\">虎牙主播跨界出演《年少有为》 平台多元赋能助力主播“破圈”</p>"
       ]
     }
   ]
