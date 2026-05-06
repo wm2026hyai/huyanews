@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>虎牙新闻 HuyaNews</title>
+  <style>
+    :root{
+      --bg:#0b1220; --card:#111a2f; --text:#e8eefc; --muted:#a8b3d6;
+      --brand:#6d5efc; --border:rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+      background:linear-gradient(180deg,#071022 0%, var(--bg) 60%);
+      color:var(--text);
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:980px; margin:0 auto; padding:20px}
+    header{
+      position:sticky; top:0; z-index:10; backdrop-filter: blur(10px);
+      background:rgba(7,16,34,.72); border-bottom:1px solid var(--border);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between; gap:14px; padding:14px 20px; max-width:980px; margin:0 auto;
+    }
+    .logo{display:flex; gap:10px; align-items:center}
+    .dot{width:12px; height:12px; background:var(--brand); border-radius:50%; box-shadow:0 0 0 5px rgba(109,94,252,.18)}
+    .title{font-weight:800; letter-spacing:.2px}
+    .links{display:flex; gap:14px; align-items:center}
+    .chip{padding:8px 12px; border:1px solid var(--border); border-radius:999px; color:var(--muted)}
+    .chip:hover{border-color:rgba(109,94,252,.5); color:var(--text)}
+    .hero{
+      padding:26px 0 10px;
+      display:flex; gap:18px; align-items:flex-end; justify-content:space-between; flex-wrap:wrap;
+    }
+    .hero h1{margin:0; font-size:28px}
+    .hero p{margin:8px 0 0; color:var(--muted)}
+    .grid{
+      margin-top:18px; display:grid; gap:14px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .card{
+      grid-column: span 6;
+      background:rgba(17,26,47,.75);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:16px;
+      transition:transform .15s ease, border-color .15s ease;
+    }
+    .card:hover{transform:translateY(-2px); border-color:rgba(109,94,252,.45)}
+    .meta{color:var(--muted); font-size:13px; display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+    .card h3{margin:10px 0 8px; font-size:18px}
+    .card p{margin:0; color:var(--muted); line-height:1.6}
+    .tag{
+      display:inline-flex; align-items:center; padding:4px 10px;
+      border:1px solid rgba(109,94,252,.35); color:#cfcaff;
+      border-radius:999px; font-size:12px;
+    }
+    .footer{margin-top:26px; color:var(--muted); font-size:13px; text-align:center; padding-bottom:20px}
+    @media (max-width: 820px){
+      .card{grid-column: span 12}
+      .hero{align-items:flex-start}
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 14px; border-radius:12px;
+      border:1px solid var(--border); background:rgba(255,255,255,.03);
+      cursor:pointer;
+    }
+    .btn:hover{border-color:rgba(109,94,252,.45)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <div class="dot"></div>
+        <div class="title">HuyaNews</div>
+      </div>
+      <div class="links">
+        <a class="chip" href="index.html">主页</a>
+        <a class="chip" href="about.html">关于我们</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <h1>虎牙新闻 · 今日精选</h1>
+        <p>这里是一个“演示版”新闻站：点击任意新闻查看详情。</p>
+      </div>
+      <div class="meta">
+        <span class="tag">Demo</span>
+        <span>支持：主页 / 文章详情 / 关于</span>
+      </div>
+    </div>
+
+    <div class="grid" id="list"></div>
+
+    <div class="footer">© <span id="year"></span> HuyaNews · 演示站</div>
+  </div>
+
+  <script>
+    const articles = [
+      {
+        id: "a1",
+        title: "虎牙新闻：本周热点回顾",
+        date: "2026-05-06",
+        category: "热点",
+        summary: "聚焦虎牙平台本周最受关注的内容与动态。"
+      },
+      {
+        id: "a2",
+        title: "内容生态：创作者工具与直播体验更新",
+        date: "2026-05-05",
+        category: "动态",
+        summary: "从互动能力到性能优化，看看最新体验带来什么变化。"
+      },
+      {
+        id: "a3",
+        title: "社区观察：用户偏好与内容趋势分析",
+        date: "2026-05-04",
+        category: "分析",
+        summary: "用更清晰的维度理解观看行为与内容热度。"
+      },
+      {
+        id: "a4",
+        title: "赛事相关：精彩对局与赛程预告",
+        date: "2026-05-03",
+        category: "赛事",
+        summary: "一起来看本期赛程与值得期待的对局。"
+      }
+    ];
+
+    function render(){
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const list = document.getElementById("list");
+      list.innerHTML = articles.map(a => `
+        <a class="card" href="article.html?id=${encodeURIComponent(a.id)}">
+          <div class="meta">
+            <span class="tag">${a.category}</span>
+            <span>${a.date}</span>
+          </div>
+          <h3>${a.title}</h3>
+          <p>${a.summary}</p>
+          <div style="margin-top:12px" class="meta">
+            <span style="color:#cfcaff">点击查看 →</span>
+          </div>
+        </a>
+      `).join("");
+    }
+    render();
+  </script>
+</body>
+</html>

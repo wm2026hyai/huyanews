@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HuyaNews · 文章详情</title>
+  <style>
+    :root{
+      --bg:#0b1220; --card:#111a2f; --text:#e8eefc; --muted:#a8b3d6;
+      --brand:#6d5efc; --border:rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+      background:linear-gradient(180deg,#071022 0%, var(--bg) 60%);
+      color:var(--text);
+    }
+    a{color:inherit; text-decoration:none}
+    header{
+      position:sticky; top:0; z-index:10; backdrop-filter: blur(10px);
+      background:rgba(7,16,34,.72); border-bottom:1px solid var(--border);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between; gap:14px; padding:14px 20px; max-width:980px; margin:0 auto;
+    }
+    .logo{display:flex; gap:10px; align-items:center}
+    .dot{width:12px; height:12px; background:var(--brand); border-radius:50%; box-shadow:0 0 0 5px rgba(109,94,252,.18)}
+    .title{font-weight:800; letter-spacing:.2px}
+    .links{display:flex; gap:14px; align-items:center}
+    .chip{padding:8px 12px; border:1px solid var(--border); border-radius:999px; color:var(--muted)}
+    .chip:hover{border-color:rgba(109,94,252,.5); color:var(--text)}
+    .wrap{max-width:980px; margin:0 auto; padding:20px}
+    .back{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 14px; border-radius:12px;
+      border:1px solid var(--border); background:rgba(255,255,255,.03);
+      margin:10px 0 18px;
+      color:var(--muted);
+    }
+    .back:hover{border-color:rgba(109,94,252,.45); color:var(--text)}
+    .content{
+      background:rgba(17,26,47,.75);
+      border:1px solid var(--border);
+      border-radius:16px; padding:18px;
+    }
+    .meta{color:var(--muted); font-size:13px; display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+    .tag{
+      display:inline-flex; align-items:center; padding:4px 10px;
+      border:1px solid rgba(109,94,252,.35); color:#cfcaff;
+      border-radius:999px; font-size:12px;
+    }
+    h1{margin:12px 0 10px; font-size:26px; line-height:1.2}
+    .body{
+      margin-top:14px; color:var(--text); line-height:1.85;
+      font-size:15.5px;
+    }
+    .body p{color:rgba(232,238,252,.92)}
+    .hr{height:1px; background:var(--border); margin:16px 0}
+    .footer{margin-top:18px; color:var(--muted); font-size:13px; text-align:center; padding-bottom:20px}
+    code{background:rgba(255,255,255,.06); padding:2px 6px; border-radius:8px; border:1px solid var(--border)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <div class="dot"></div>
+        <div class="title">HuyaNews</div>
+      </div>
+      <div class="links">
+        <a class="chip" href="index.html">主页</a>
+        <a class="chip" href="about.html">关于我们</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <a class="back" href="index.html">← 返回主页</a>
+
+    <div class="content">
+      <div class="meta" id="meta"></div>
+      <h1 id="title">加载中...</h1>
+
+      <div class="body" id="body"></div>
+      <div class="hr"></div>
+      <div class="meta" style="justify-content:space-between">
+        <span>© <span id="year"></span> HuyaNews</span>
+        <span>Demo 文章</span>
+      </div>
+    </div>
+
+    <div class="footer">提示：要接真实新闻，把数据换成你自己的内容源即可。</div>
+  </div>
+
+  <script>
+    const articles = {
+      a1: {
+        id:"a1",
+        title:"虎牙新闻：本周热点回顾",
+        date:"2026-05-06",
+        category:"热点",
+        paragraphs:[
+          "本页面是 HuyaNews 的演示版文章详情。你可以把它当成“新闻模板”。",
+          "接下来你只需要把文章数据替换成真实内容：标题、日期、分类、正文。",
+          "如果你要做成真正新闻站，我建议使用前端读取你的后端接口或静态 JSON 文件。"
+        ]
+      },
+      a2: {
+        id:"a2",
+        title:"内容生态：创作者工具与直播体验更新",
+        date:"2026-05-05",
+        category:"动态",
+        paragraphs:[
+          "本周围绕“创作者工具”和“直播体验”展开了多项改进。",
+          "更好的互动、稳定的播放与更清晰的内容入口，会让用户停留更顺畅。",
+          "下一步我们可以加入：分类筛选、搜索、置顶列表等功能。"
+        ]
+      },
+      a3: {
+        id:"a3",
+        title:"社区观察：用户偏好与内容趋势分析",
+        date:"2026-05-04",
+        category:"分析",
+        paragraphs:[
+          "通过观察用户偏好，我们可以更快定位哪些内容更容易引发讨论与复访。",
+          "演示版先把布局搭起来：你后续的数据源可以来自爬虫/人工/后台 CMS（取决于你的合规要求）。",
+          "如果你告诉我你想要的“栏目结构”，我可以继续把 HuyaNews 扩展得更像媒体站。"
+        ]
+      },
+      a4: {
+        id:"a4",
+        title:"赛事相关：精彩对局与赛程预告",
+        date:"2026-05-03",
+        category:"赛事",
+        paragraphs:[
+          "比赛内容通常有很明确的时间线：赛程、赛果、精彩瞬间。",
+          "把文章详情结构做好之后，我们再加“赛事卡片/时间轴”会非常自然。",
+          "现在先上线可访问地址，再逐步完善功能。"
+        ]
+      }
+    };
+
+    function getId(){
+      const params = new URLSearchParams(location.search);
+      return params.get("id");
+    }
+
+    function render(){
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const id = getId();
+      const a = articles[id];
+      if(!a){
+        document.getElementById("title").textContent = "文章不存在";
+        document.getElementById("meta").innerHTML = `<span class="tag">Error</span><span>未找到 id：${id||""}</span>`;
+        document.getElementById("body").innerHTML = `<p>请回到 <a href="index.html">主页</a> 重新选择。</p>`;
+        return;
+      }
+      document.getElementById("meta").innerHTML = `
+        <span class="tag">${a.category}</span>
+        <span>${a.date}</span>
+      `;
+      document.getElementById("title").textContent = a.title;
+      document.getElementById("body").innerHTML = a.paragraphs.map(p => `<p>${p}</p>`).join("");
+    }
+    render();
+  </script>
+</body>
+</html>

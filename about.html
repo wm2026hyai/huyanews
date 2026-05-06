@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HuyaNews · 关于我们</title>
+  <style>
+    :root{
+      --bg:#0b1220; --card:#111a2f; --text:#e8eefc; --muted:#a8b3d6;
+      --brand:#6d5efc; --border:rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+      background:linear-gradient(180deg,#071022 0%, var(--bg) 60%);
+      color:var(--text);
+    }
+    a{color:inherit; text-decoration:none}
+    header{
+      position:sticky; top:0; z-index:10; backdrop-filter: blur(10px);
+      background:rgba(7,16,34,.72); border-bottom:1px solid var(--border);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between; gap:14px; padding:14px 20px; max-width:980px; margin:0 auto;
+    }
+    .logo{display:flex; gap:10px; align-items:center}
+    .dot{width:12px; height:12px; background:var(--brand); border-radius:50%; box-shadow:0 0 0 5px rgba(109,94,252,.18)}
+    .title{font-weight:800; letter-spacing:.2px}
+    .links{display:flex; gap:14px; align-items:center}
+    .chip{padding:8px 12px; border:1px solid var(--border); border-radius:999px; color:var(--muted)}
+    .chip:hover{border-color:rgba(109,94,252,.5); color:var(--text)}
+    .wrap{max-width:980px; margin:0 auto; padding:20px}
+    .content{
+      margin-top:18px;
+      background:rgba(17,26,47,.75);
+      border:1px solid var(--border);
+      border-radius:16px; padding:18px;
+      line-height:1.9;
+      color:rgba(232,238,252,.95);
+    }
+    h1{margin:0 0 10px; font-size:26px}
+    .muted{color:var(--muted)}
+    .footer{margin-top:18px; color:var(--muted); font-size:13px; text-align:center; padding-bottom:20px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <div class="dot"></div>
+        <div class="title">HuyaNews</div>
+      </div>
+      <div class="links">
+        <a class="chip" href="index.html">主页</a>
+        <a class="chip" href="about.html">关于我们</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="content">
+      <h1>关于 HuyaNews</h1>
+      <p class="muted">HuyaNews 是一个“虎牙新闻站”的演示版前端。当前包含：</p>
+      <ul class="muted">
+        <li>主页：新闻列表</li>
+        <li>文章详情：通过参数 <code>?id=</code> 加载内容</li>
+        <li>关于我们：站点介绍</li>
+      </ul>
+      <div style="margin-top:10px">
+        <p>下一步如果你想做得更真实（比如：搜索、分类、文章正文来自接口/CMS），告诉我你的目标栏目结构。</p>
+        <p>我也可以帮你把数据源从静态改成：读取你自己的 JSON / 或对接你的后端接口。</p>
+      </div>
+    </div>
+
+    <div class="footer">© <span id="year"></span> HuyaNews</div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
