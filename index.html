@@ -102,56 +102,50 @@
     <div class="footer">© <span id="year"></span> HuyaNews · 演示站</div>
   </div>
 
-  <script>
-    const articles = [
-      {
-        id: "a1",
-        title: "虎牙新闻：本周热点回顾",
-        date: "2026-05-06",
-        category: "热点",
-        summary: "聚焦虎牙平台本周最受关注的内容与动态。"
-      },
-      {
-        id: "a2",
-        title: "内容生态：创作者工具与直播体验更新",
-        date: "2026-05-05",
-        category: "动态",
-        summary: "从互动能力到性能优化，看看最新体验带来什么变化。"
-      },
-      {
-        id: "a3",
-        title: "社区观察：用户偏好与内容趋势分析",
-        date: "2026-05-04",
-        category: "分析",
-        summary: "用更清晰的维度理解观看行为与内容热度。"
-      },
-      {
-        id: "a4",
-        title: "赛事相关：精彩对局与赛程预告",
-        date: "2026-05-03",
-        category: "赛事",
-        summary: "一起来看本期赛程与值得期待的对局。"
-      }
-    ];
+ <script>
+  async function loadData(){
+    const res = await fetch("./data.json", { cache: "no-store" });
+    if(!res.ok) throw new Error("Failed to load data.json");
+    return res.json();
+  }
 
-    function render(){
-      document.getElementById("year").textContent = new Date().getFullYear();
-      const list = document.getElementById("list");
-      list.innerHTML = articles.map(a => `
-        <a class="card" href="article.html?id=${encodeURIComponent(a.id)}">
-          <div class="meta">
-            <span class="tag">${a.category}</span>
-            <span>${a.date}</span>
-          </div>
-          <h3>${a.title}</h3>
-          <p>${a.summary}</p>
-          <div style="margin-top:12px" class="meta">
-            <span style="color:#cfcaff">点击查看 →</span>
-          </div>
-        </a>
-      `).join("");
-    }
-    render();
-  </script>
+  function escapeHtml(str){
+    return String(str)
+      .replaceAll("&","&amp;")
+      .replaceAll("<","&lt;")
+      .replaceAll(">","&gt;")
+      .replaceAll('"',"&quot;")
+      .replaceAll("'","&#039;");
+  }
+
+  async function render(){
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const data = await loadData();
+    const articles = data.articles || [];
+
+    const list = document.getElementById("list");
+    list.innerHTML = articles.map(a => `
+      <a class="card" href="article.html?id=${encodeURIComponent(a.id)}">
+        <div class="meta">
+          <span class="tag">${escapeHtml(a.category || "")}</span>
+          <span>${escapeHtml(a.date || "")}</span>
+        </div>
+        <h3>${escapeHtml(a.title || "")}</h3>
+        <p>${escapeHtml(a.summary || "")}</p>
+        <div style="margin-top:12px" class="meta">
+          <span style="color:#cfcaff">点击查看 →</span>
+        </div>
+      </a>
+    `).join("");
+  }
+
+  render().catch(err => {
+    document.getElementById("list").innerHTML =
+      `<div class="card"><h3>加载失败</h3><p>${err.message}</p></div>`;
+    console.error(err);
+  });
+</script>
+
 </body>
 </html>
